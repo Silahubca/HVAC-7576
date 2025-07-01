@@ -37,9 +37,9 @@ const Contact = () => {
     {
       icon: FiMail,
       title: 'Email Us',
-      details: 'info@prohvacservices.com',
+      details: 'info@zataxandaccounting.com',
       subDetails: 'We respond within 24 hours',
-      action: 'mailto:info@prohvacservices.com'
+      action: 'mailto:info@zataxandaccounting.com'
     },
     {
       icon: FiMapPin,
@@ -60,7 +60,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Pro HVAC Services | Get Your Free Tax Consultation</title>
+        <title>Contact ZA Tax and Accounting | Get Your Free Tax Consultation</title>
         <meta name="description" content="Contact ZA Tax and Accounting for all your tax and accounting needs. Call (555) TAX-HELP for expert tax preparation or schedule online. Free consultations available." />
         <meta name="keywords" content="contact tax preparer, tax consultation, accounting services, tax help, tax questions, tax appointment" />
         <link rel="canonical" href="https://zataxandaccounting.com/contact" />
@@ -79,7 +79,7 @@ const Contact = () => {
               Get In Touch
             </h1>
             <p className="text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
-              Ready to get your HVAC done right? Have questions about our accounting services? 
+              Ready to get your taxes done right? Have questions about our accounting services? 
               We're here to help with all your tax and financial needs.
             </p>
           </motion.div>

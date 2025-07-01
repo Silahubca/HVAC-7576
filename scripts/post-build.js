@@ -46,12 +46,13 @@ const generateSitemap = () => {
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${baseUrl}${page.url}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n')}
+  ${pages.map(page => `
+    <url>
+      <loc>${baseUrl}${page.url}</loc>
+      <lastmod>${currentDate}</lastmod>
+      <changefreq>${page.changefreq}</changefreq>
+      <priority>${page.priority}</priority>
+    </url>`).join('\n')}
 </urlset>`;
 
   try {
@@ -139,7 +140,7 @@ const createDeploymentInfo = () => {
     mimeTypesFix: 'included',
     features: [
       'SEO Optimized',
-      'Mobile Responsive', 
+      'Mobile Responsive',
       'Blog CMS',
       'Service Areas',
       'Contact Forms',
@@ -151,7 +152,7 @@ const createDeploymentInfo = () => {
 
   try {
     fs.writeFileSync(
-      path.join(distDir, 'deployment-info.json'), 
+      path.join(distDir, 'deployment-info.json'),
       JSON.stringify(deploymentInfo, null, 2)
     );
     console.log('✅ Created deployment-info.json');
@@ -163,12 +164,11 @@ const createDeploymentInfo = () => {
 // Verify JavaScript files
 const verifyJavaScriptFiles = () => {
   console.log('🔍 Verifying JavaScript file extensions...');
-  
   const assetsDir = path.join(distDir, 'assets');
+  
   if (fs.existsSync(assetsDir)) {
     const files = fs.readdirSync(assetsDir);
     const jsFiles = files.filter(file => file.endsWith('.js'));
-    
     console.log(`✅ Found ${jsFiles.length} .js files with correct extensions`);
     
     // Check for any .mjs files that might cause MIME issues
@@ -198,14 +198,14 @@ try {
     const filePath = path.join(distDir, file);
     const stats = fs.statSync(filePath);
     const size = stats.isFile() ? `(${(stats.size / 1024).toFixed(1)}KB)` : '';
-    console.log(`   - ${file} ${size}`);
+    console.log(`  - ${file} ${size}`);
   });
-  
+
   console.log('\n🔧 MIME Type Configuration:');
-  console.log('   ✅ netlify.toml - Netlify hosting');
-  console.log('   ✅ vercel.json - Vercel hosting');
-  console.log('   ✅ .htaccess - Apache/cPanel hosting');
-  console.log('   ✅ web.config - IIS/Azure hosting');
+  console.log('  ✅ netlify.toml - Netlify hosting');
+  console.log('  ✅ vercel.json - Vercel hosting');
+  console.log('  ✅ .htaccess - Apache/cPanel hosting');
+  console.log('  ✅ web.config - IIS/Azure hosting');
   
 } catch (error) {
   console.error('❌ Post-build error:', error);

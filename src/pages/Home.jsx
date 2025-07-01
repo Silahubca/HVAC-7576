@@ -12,24 +12,24 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>ZA Tax and Accounting - Professional Tax Services & Accounting Solutions</title>
-        <meta name="description" content="Professional tax preparation and accounting services for individuals and businesses. Expert tax planning, bookkeeping, payroll, and financial consulting. Trusted tax professionals." />
-        <meta name="keywords" content="tax preparation, accounting services, tax planning, bookkeeping, business taxes, individual taxes, tax professionals, CPA services, payroll services" />
-        <link rel="canonical" href="https://zataxandaccounting.com/" />
+        <title>Pro HVAC Services - Professional Heating & Cooling Solutions</title>
+        <meta name="description" content="Professional HVAC services including heating, cooling, installation, repair, and maintenance. 24/7 emergency service. Licensed and insured technicians serving the metro area." />
+        <meta name="keywords" content="HVAC services,heating repair,air conditioning,furnace installation,AC repair,emergency HVAC,professional HVAC contractor" />
+        <link rel="canonical" href="https://prohvacservices.com/" />
         
         {/* Local Business Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "ZA Tax and Accounting",
-            "image": "https://zataxandaccounting.com/logo.png",
-            "url": "https://zataxandaccounting.com",
-            "telephone": "+1-555-TAX-HELP",
+            "name": "Pro HVAC Services",
+            "image": "https://prohvacservices.com/logo.png",
+            "url": "https://prohvacservices.com",
+            "telephone": "+1-555-HVAC-PRO",
             "priceRange": "$$",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "123 Business Drive",
+              "streetAddress": "123 Service Drive",
               "addressLocality": "Your City",
               "addressRegion": "ST",
               "postalCode": "12345",
@@ -42,9 +42,9 @@ const Home = () => {
             },
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-              "opens": "09:00",
-              "closes": "17:00"
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "07:00",
+              "closes": "20:00"
             },
             "serviceArea": {
               "@type": "GeoCircle",
@@ -57,27 +57,27 @@ const Home = () => {
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
-              "name": "Tax and Accounting Services",
+              "name": "HVAC Services",
               "itemListElement": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
-                    "@type": "Service", 
-                    "name": "Tax Preparation"
+                    "@type": "Service",
+                    "name": "HVAC Installation"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Business Accounting"
+                    "name": "HVAC Repair"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Tax Planning"
+                    "name": "HVAC Maintenance"
                   }
                 }
               ]

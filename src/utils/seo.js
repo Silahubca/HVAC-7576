@@ -4,14 +4,14 @@ export const generateStructuredData = {
   localBusiness: () => ({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "ZA Tax and Accounting",
-    "image": "https://zataxandaccounting.com/logo.png",
-    "url": "https://zataxandaccounting.com",
-    "telephone": "+1-555-TAX-HELP",
+    "name": "Pro HVAC Services",
+    "image": "https://prohvacservices.com/logo.png",
+    "url": "https://prohvacservices.com",
+    "telephone": "+1-555-HVAC-PRO",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Business Drive",
+      "streetAddress": "123 Service Drive",
       "addressLocality": "Your City",
       "addressRegion": "ST",
       "postalCode": "12345",
@@ -24,9 +24,9 @@ export const generateStructuredData = {
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00",
-      "closes": "17:00"
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00",
+      "closes": "20:00"
     },
     "serviceArea": {
       "@type": "GeoCircle",
@@ -39,27 +39,27 @@ export const generateStructuredData = {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Tax and Accounting Services",
+      "name": "HVAC Services",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Tax Preparation"
+            "name": "HVAC Installation"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Business Accounting"
+            "name": "HVAC Repair"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Tax Planning"
+            "name": "HVAC Maintenance"
           }
         }
       ]
@@ -74,7 +74,7 @@ export const generateStructuredData = {
     "description": description,
     "provider": {
       "@type": "LocalBusiness",
-      "name": "ZA Tax and Accounting"
+      "name": "Pro HVAC Services"
     },
     "areaServed": {
       "@type": "City",
@@ -95,17 +95,17 @@ export const generateStructuredData = {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "ZA Tax and Accounting",
+      "name": "Pro HVAC Services",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://zataxandaccounting.com/logo.png"
+        "url": "https://prohvacservices.com/logo.png"
       }
     },
     "datePublished": post.publishedAt,
     "dateModified": post.updatedAt,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://zataxandaccounting.com/blog/${post.slug}`
+      "@id": `https://prohvacservices.com/blog/${post.slug}`
     }
   }),
 
@@ -127,11 +127,11 @@ export const generateStructuredData = {
 // SEO Meta Tag Generator
 export const generateMetaTags = (page) => {
   const defaults = {
-    title: "ZA Tax and Accounting - Professional Tax Services & Accounting Solutions",
-    description: "Professional tax preparation and accounting services for individuals and businesses. Expert tax planning, bookkeeping, and financial consulting services.",
-    keywords: "tax preparation, accounting services, tax planning, bookkeeping, business taxes, individual taxes, tax professionals",
-    canonical: "https://zataxandaccounting.com/",
-    ogImage: "https://zataxandaccounting.com/og-image.jpg"
+    title: "Pro HVAC Services - Professional Heating & Cooling Solutions",
+    description: "Professional HVAC services including heating, cooling, installation, repair, and maintenance. 24/7 emergency service. Licensed and insured technicians.",
+    keywords: "HVAC services,heating repair,air conditioning,furnace installation,AC repair,emergency HVAC,professional HVAC contractor",
+    canonical: "https://prohvacservices.com/",
+    ogImage: "https://prohvacservices.com/og-image.jpg"
   };
 
   return {
@@ -148,22 +148,22 @@ export const generateMetaTags = (page) => {
 
 // Sitemap Generator
 export const generateSitemap = () => {
-  const baseUrl = 'https://zataxandaccounting.com';
+  const baseUrl = 'https://prohvacservices.com';
   const currentDate = new Date().toISOString();
-
+  
   const staticPages = [
     { url: '/', priority: '1.0', changefreq: 'weekly' },
     { url: '/about', priority: '0.8', changefreq: 'monthly' },
     { url: '/contact', priority: '0.9', changefreq: 'monthly' },
-    { url: '/services/tax-preparation', priority: '0.9', changefreq: 'monthly' },
-    { url: '/services/business-taxes', priority: '0.9', changefreq: 'monthly' },
-    { url: '/services/bookkeeping', priority: '0.9', changefreq: 'monthly' },
-    { url: '/services/tax-planning', priority: '0.8', changefreq: 'monthly' },
-    { url: '/services/payroll', priority: '0.8', changefreq: 'monthly' },
-    { url: '/services/financial-consulting', priority: '0.8', changefreq: 'monthly' },
-    { url: '/individual-services', priority: '0.8', changefreq: 'monthly' },
-    { url: '/business-services', priority: '0.8', changefreq: 'monthly' },
-    { url: '/tax-relief', priority: '0.9', changefreq: 'monthly' },
+    { url: '/services/hvac-installation', priority: '0.9', changefreq: 'monthly' },
+    { url: '/services/hvac-repair', priority: '0.9', changefreq: 'monthly' },
+    { url: '/services/hvac-maintenance', priority: '0.9', changefreq: 'monthly' },
+    { url: '/services/heating', priority: '0.8', changefreq: 'monthly' },
+    { url: '/services/cooling', priority: '0.8', changefreq: 'monthly' },
+    { url: '/services/air-quality', priority: '0.8', changefreq: 'monthly' },
+    { url: '/residential-services', priority: '0.8', changefreq: 'monthly' },
+    { url: '/commercial-services', priority: '0.8', changefreq: 'monthly' },
+    { url: '/emergency-service', priority: '0.9', changefreq: 'monthly' },
     { url: '/service-areas', priority: '0.8', changefreq: 'monthly' },
     { url: '/blog', priority: '0.7', changefreq: 'weekly' },
     { url: '/careers', priority: '0.5', changefreq: 'monthly' }
@@ -171,12 +171,13 @@ export const generateSitemap = () => {
 
   const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${staticPages.map(page => `  <url>
-    <loc>${baseUrl}${page.url}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n')}
+  ${staticPages.map(page => `
+    <url>
+      <loc>${baseUrl}${page.url}</loc>
+      <lastmod>${currentDate}</lastmod>
+      <changefreq>${page.changefreq}</changefreq>
+      <priority>${page.priority}</priority>
+    </url>`).join('\n')}
 </urlset>`;
 
   return sitemapXml;
@@ -191,7 +192,7 @@ Allow: /
 Disallow: /admin/
 
 # Sitemap
-Sitemap: https://zataxandaccounting.com/sitemap.xml
+Sitemap: https://prohvacservices.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1`;

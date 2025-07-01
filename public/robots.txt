@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /#/admin/
+
+# Sitemap
+Sitemap: https://zataxandaccounting.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

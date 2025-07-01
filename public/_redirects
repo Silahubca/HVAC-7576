@@ -1,0 +1,9 @@
+# Netlify redirects for SPA routing
+/*    /index.html   200
+
+# Redirect old hash URLs to clean URLs (if needed)
+/#/about               /about              301!
+/#/contact             /contact            301!
+/#/services/*          /services/:splat    301!
+/#/blog/*              /blog/:splat        301!
+/#/*                   /:splat             301!
